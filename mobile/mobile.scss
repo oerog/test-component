@@ -1,6 +1,6 @@
-$header_message: "true";
+$reminder_message: "true";
 $message_color: $primary;
-@if $header_message == "false" {
+@if $reminder_message == "false" {
   .banner-container {
     display: none !important;
   }
