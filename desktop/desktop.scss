@@ -1,12 +1,10 @@
-$dark-theme: "true";  /* false for light theme */
-$large_avatar: "true"; /* false ***AND DELETE DESKTOP HEAD <script>*** for regular avatars */
 $borders: #d5d5d5; /*border between posts*/
 $border2: #c5c5c5; /*border for embedded posts. should look fine if $border2 = $borders */
-@if $dark-theme == "true"  {
+@if $dark_theme == "true"  {
     $borders: #555;
     $border2: #888;
 } 
-@if $large-avatar == "true"  {
+@if $large_avatar == "true"  {
     .topic-avatar {
         width: 90px;
             .avatar {
