@@ -1,0 +1,20 @@
+dark_theme:
+  type: bool
+  default: false
+  description:
+    en: 'Select to for use with Dark Color Palette'
+large_avatar:
+  type: bool
+  default: false
+  description:
+    en: 'Select for use with large (90px vs 45px) avatars on screens > 630px'
+header_message: 
+  type: bool
+  default: false
+  description:
+    en: 'Select to show dismissible reminder message below header to use in Desktop View. Message sets a cookie when dismissed.'
+message_color: 
+  type: string
+  default: "#FFF"
+  description:
+    en: 'Text color of the message. Default is White. The Background color is the Danger color from your palette'
