@@ -8,7 +8,7 @@ large_avatar:
   default: false
   description:
     en: 'Select for use with large (90px vs 45px) avatars on screens > 630px'
-header_message: 
+reminder_message: 
   type: bool
   default: false
   description:
