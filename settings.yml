@@ -2,12 +2,12 @@ dark_theme:
   type: bool
   default: false
   description:
-    en: 'Select to for use with Dark Color Palette'
+    en: 'Select to use with Dark Color Palettes'
 large_avatar:
   type: bool
   default: false
   description:
-    en: 'Select for use with large (90px vs 45px) avatars on screens > 630px'
+    en: 'Select to use large avatars (90px vs 45px) on screens > 630px'
 reminder_message: 
   type: bool
   default: false
