@@ -1,6 +1,7 @@
 <script type="text/discourse-plugin"version="0.8.18">
-//if settings.large_avatars {
-            api.changeWidgetSetting('post-avatar', 'size', '90');
+            if settings.large_avatar {
+                        api.changeWidgetSetting('post-avatar', 'size', '90');
+           }
 </script>
 <script>
 function navDropdown() {
