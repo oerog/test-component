@@ -1,5 +1,3 @@
-$reminder_message: "true";
-$message_color: $primary;
 @if $reminder_message == "false" {
   .banner-container {
     display: none !important;
