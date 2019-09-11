@@ -1,0 +1,704 @@
+$dark-theme: "true";  /* false for light theme */
+$large_avatar: "true"; /* false ***AND DELETE DESKTOP HEAD <script>*** for regular avatars */
+$borders: #d5d5d5; /*border between posts*/
+$border2: #c5c5c5; /*border for embedded posts. should look fine if $border2 = $borders */
+@if $dark-theme == "true"  {
+    $borders: #555;
+    $border2: #888;
+} 
+@if $large-avatar == "true"  {
+    .topic-avatar {
+        width: 90px;
+            .avatar {
+                width: 90px;
+                height: 90px;
+        }
+    }
+    @media screen and (min-width: 1140px) {
+        .timeline-container {
+          margin-left: 900px;
+        }
+    }
+    @media (max-width: 1139px) {
+        .timeline-container {
+            margin-left: 83% !important;
+        }
+    }
+    @media (max-width: 991px) {
+        .timeline-container {
+            margin-left: 86% !important;
+        }
+    }
+    @media (max-width: 924px) {
+        .timeline-container {
+            margin-left: 0 !important;
+        }
+    }
+}
+.embedded-posts .topic-avatar {
+  width: 45px;
+  img.avatar {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 629px) {
+    .topic-avatar {
+        width: 45px !important;
+        img.avatar {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
+ 
+
+
+/***** Embedded Posts > 630px *********/
+.embedded-posts .topic-body { 
+   	border-top:none !important;
+    padding: 0px;
+}
+.embedded-posts.topic-body {
+    border: 1px solid $border2;
+    border-bottom:none;
+    padding: 0;
+    margin-top: 10px;
+    max-width: 700px;
+}
+.embedded-posts.top {
+    border-bottom: none;
+    margin-left: 85px;
+    max-width: 755px;
+
+}
+@media (max-width: 120000px){
+.embedded-posts.top {
+    width: calc(100% - 90px);
+    }
+}
+.embedded-posts.top .row {
+    padding: 0 0 15px 0;
+}
+.embedded-posts.top  .topic-avatar{
+    border-top: none !important;
+    padding:0 !important;
+    position: relative;
+    right: 24px;
+    bottom: 15px;
+}
+.embedded-posts.top .topic-body .topic-meta-data {
+        padding: 0 11px 0.25em 0px;
+        margin-bottom: 0;
+        position: relative;
+        bottom: 5px;
+}
+.embedded-posts.bottom {
+    margin-left: -45px;
+    margin-bottom: 25px;
+    padding: 0;
+    max-width: 755px;
+}
+.embedded-posts.bottom .row {
+    padding: 20px 0 25px;
+    border: 1px solid $border2;
+}
+.embedded-posts.bottom .topic-body .topic-meta-data {
+        padding: 0 11px 0.25em 0px;
+        margin-bottom: 20px;
+ }
+.embedded-posts.bottom .topic-body {
+    position: relative;
+    top: 10px;
+}
+.embedded-posts.bottom  .topic-avatar{
+    border-top: none !important;
+    padding:0 !important;
+    position: relative;
+    right: 24px;
+}
+.embedded-posts .collapse-down, .embedded-posts .collapse-up {
+    position: absolute;
+    border: 1px solid $border2;
+}
+button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
+    position: relative;
+    top: 60px;
+}
+@media (min-width: 630px) and (max-width: 880px){
+.topic-body {
+    box-sizing: border-box;
+    width: calc(100% - 110px);
+    }
+}
+/************** Style Desktop for Mobile **************/
+@media (max-width: 629px) {
+body, html {
+    overflow-x: hidden; 
+}
+tbody {
+    border-top:none !important;
+}
+
+
+/******************************************************/
+/******* Make Latest Topics Pages Fit on Mobile *******/ 
+/******************************************************/
+td.main-link {
+    width: 100%;
+}
+table.topic-list thead, td.posters {
+	display: none;
+}
+.topic-list .num a.badge-posts {
+	position: relative;
+	left: 80px;
+	top: -15px;
+}
+.topic-list td.num.posts-map.posts {
+    padding: 4px 0 0 0;
+    position: relative;
+    right: 69px;
+    max-width: 0px;
+}
+.topic-list td.num.age {
+	position: relative;
+	left: 0px;
+	padding-top:28px;
+	text-align: left; 
+}
+.topic-list td.num.views {
+    display: none;
+}
+.container.list-container #header-list-area {
+    display: none;
+}
+.suggested-topics .topics {
+    border-top: 2px solid $borders;
+}
+.list-controls {
+    margin-bottom: 14px;
+}
+.nav-pills>li {
+    margin-bottom: 10px;
+}
+.navigation-topics .categories-list .topic-post-badges {
+    position: absolute;
+    right: 70px;
+}
+.navigation-topics .categories-list .topic-list .main-link a.title {
+    margin-right: 26px;
+}
+.subcategory .category-name {
+    font-size: 1em;
+}
+.badge-wrapper {
+    font-size: 1em;
+}
+.list-controls .btn {
+    float: none;
+}
+.staff.categories-list .list-controls .btn {
+    float: right;
+}
+
+/********** Topic Posts ***********/
+.regular {
+    padding-left: 5px;
+}
+.regular.contents p {
+    margin-bottom: 5px;
+}
+.post-menu-area {
+    margin: 5px 0 15px;
+}
+.topic-avatar, .topic-body {
+    border-top: 2px solid $borders;
+}
+.topic-body {
+    padding: 15px 10px 0 20px;
+}
+.topic-avatar {
+    padding-left: 0;   
+    padding-top: 15px
+}
+.topic-body .topic-meta-data {
+    padding: 0 11px 1em 0;
+    margin-bottom: 25px;
+}
+.topic-post.regular {
+     padding-left: 0px!important;
+}
+.topic-owner.regular {
+     padding-left: 0px!important;
+}
+.topic-owner {
+    border-bottom:none!important;
+}
+.cooked {
+    padding-left: 0!important;
+}
+.topic-body .regular.contents {
+    margin-left: -65px;
+    padding-left: 0;
+}
+aside.onebox {
+    margin-bottom: 1em;
+    margin-top: 1.1em;        
+    padding: 12px 15px ;
+    font-size: 1em;
+    max-width: 600px;
+}
+.lightbox-wrapper {
+    margin-top: .5em;
+}
+nav.post-controls button {
+    padding: 8px 8px;
+    margin-left: 1px;
+}
+button.widget-button.btn-flat.reply.create.fade-out.btn-icon-text{
+    padding: 8px 10px;
+}
+.btn-flat.reply.btn-icon-text .d-button-label {
+    display: none;
+}
+@media (max-width: 359px) {
+    nav.post-controls button {
+        padding: 8px 5px;
+        margin-left: 1px;
+    }
+}
+.suggested-topics .topics {
+    margin: 0 5px 0 -10px;
+}
+/********* Header Extra Info on Posts *********/
+#list-area .show-more.has-topics .alert {
+    padding: 6px 35px 6px 14px;
+    margin-top: -27px;
+}
+
+.extra-info.two-rows h1 {
+    font-size: 1.1em;        
+} 
+
+@media (max-width: 570px){
+    .extra-info-wrapper {
+        display:flex;
+        line-height: 1.2;
+        padding: 0 0 0 .25em;
+    }
+    .extra-info-wrapper .categories-wrapper  {
+        font-size: .9em;        
+    }
+    .extra-info.two-rows h1  {
+        font-size: 1em;
+    }
+ 
+    .archetype-regular .d-header-icons .icon {
+        padding: 0;    
+    }
+    .archetype-regular .logo-small {
+      /*  display: none;*/
+    }
+}    
+.extra-info-wrapper .badge-wrapper .badge-category .category-name {
+    font-weight:normal;
+}  
+/******** Topic Map  ********/
+.topic-map {
+    margin: 20px -5px 20px -65px;
+}
+section.map.map-collapsed li.secondary, section.map.map-collapsed li.avatars {
+    display: none;
+}
+.topic-map .buttons .btn {
+    padding: 15px 23px;
+}
+.topic-map-expanded table.topic-links {
+    table-layout: fixed;
+    font-size: .9em;
+}
+.topic-map .links, .topic-map .information {
+    overflow: auto;
+}
+/********** Topic Footer **********/
+.topic-status-info {
+    padding: 5px 0;
+}
+#topic-footer-buttons {
+    margin: 0px -5px 10px -10px;
+    padding: 15px 12px 5px;
+}
+button#topic-footer-button-bookmark span.d-button-label, button#topic-footer-button-share-and-invite span.d-button-label, button#topic-footer-button-flag span.d-button-label {
+    display: none;
+}
+#topic-footer-buttons .btn {
+    margin-right: 7px;
+    padding: 6px 10px;
+}
+.topic-footer-button.btn .d-icon {
+    margin-right: 0;
+}
+#topic-footer-buttons .topic-notifications-button {
+    display: flex;
+    align-items: center;
+}
+.topic-notifications-button .reason {
+    font-size: .95em;
+}
+@media (min-width: 340px) {
+    #topic-footer-buttons {
+        margin: 0px 0px 10px -5px;
+    }
+    #topic-footer-buttons .btn {
+        margin-right: 10px;
+    }    
+    .topic-notifications-button .reason {
+        font-size: 1em;
+    }
+}
+@media (min-width: 380px) {
+    #topic-footer-buttons {
+        margin: 0px 10px 10px 10x;
+        padding: 15px 15px 5px;
+    }
+}
+@media (min-width: 480px) {
+    #topic-footer-buttons {
+        margin: 0px 25px 10px 15px;
+    }
+}
+.dropdown-select-box.notifications-button.topic-notifications-options.has-selection{
+    padding-bottom: 7px;
+}
+.bootbox.modal { /*This is the "Are you sure you want to cancel your post" dialogue*/
+    font-size: .9em;
+    top: 20%;
+    left: 1%;
+    width: 98%;
+    margin: 30% 1% 0 0;
+}
+@media (min-width: 630px) {
+    .bootbox.modal { /*This is the "Are you sure you want to cancel your post" dialogue*/
+        margin: 5% 25%;
+        width:50%;
+    }
+}
+/***** Embedded Posts (The reason we are doing this) *********/
+.embedded-posts .topic-body { 
+   	border-top:none !important;
+    padding: 0px;
+}
+.embedded-posts.topic-body {
+    border: 1px solid $border2;
+    border-bottom:none;
+    padding: 0;
+    margin-top: 10px;
+    max-width: 700px;
+}
+.embedded-posts.top {
+    border-bottom: none;
+    margin-left: 25px;
+    width: 88%;
+}
+@media (min-width: 468px) {
+    .embedded-posts.top {
+    border-bottom: none;
+    margin-left: 25px;
+    width: 89%;
+    }
+}
+.embedded-posts.top .row {
+    padding: 0 0 15px 0;
+}
+.embedded-posts.top  .topic-avatar{
+    border-top: none !important;
+    padding:0 !important;
+    position: relative;
+    right: 24px;
+    bottom: 15px;
+}
+.embedded-posts.top .topic-body .topic-meta-data {
+    padding: 0 11px 0.25em 0px;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 5px;
+}
+.embedded-posts.bottom {
+    margin-left: 25px;
+    margin-bottom: 25px;
+    width: 90%;
+    padding:  0 0;
+    max-width: 700px;
+}
+.embedded-posts.bottom .row {
+    padding: 20px 0 25px;
+    border: 1px solid $border2;
+}
+
+.embedded-posts.bottom .topic-body .topic-meta-data {
+    padding: 0 11px 0.25em 0px;
+    margin-bottom: 20px;
+ }
+
+.embedded-posts.bottom .topic-body {
+    position: relative;
+    top: 10px;
+}
+.embedded-posts.bottom  .topic-avatar{
+    border-top: none !important;
+    padding:0 !important;
+    position: relative;
+    right: 24px;
+}
+.embedded-posts .collapse-down, .embedded-posts .collapse-up {
+    position: absolute;
+    border: 1px solid $border2;
+}
+button.widget-button.btn.btn.collapse-down.no-text.btn-icon {
+    position: relative;
+    top: 60px;
+}
+
+/*********** Composer ************/
+.composer-popup {
+    display:none !important;
+}
+.d-editor-textarea-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid $border2;
+}
+.d-editor-preview-wrapper {
+    display:none;
+}
+a.toggle-preview { 
+    display: none;
+}
+@media (min-width:568px){
+    .d-editor-preview-wrapper {
+        display:block;
+        min-width: 50%;
+    }
+    a.toggle-preview { 
+        display: block;
+        padding-right: 10px;
+    }    
+}
+.fullscreen-composer #reply-control.fullscreen .d-editor-preview-wrapper {
+    margin: 5%;
+}
+#reply-control.fullscreen .reply-area {
+        padding: 0;
+        box-sizing: border-box;
+        height: calc(100% - 11px);
+        width: 100%;
+}
+.fullscreen-composer #reply-control.fullscreen #draft-status, .fullscreen-composer #reply-control.fullscreen #file-uploading, #reply-control #draft-status, #reply-control #file-uploading {
+     margin-left: 10px;
+}
+#reply-control.open { /*Reply window was opening too high to fit on smaller mobile screens with extended keyboards*/
+    height: 250px;
+}
+.fullscreen-composer #reply-control.fullscreen .reply-to {
+    border-bottom: 1px solid $borders;
+    padding-bottom: 3px;
+    margin: 0;
+}
+
+#reply-control .reply-to {
+    margin: 5px 0;
+}
+/** Had to remove some items from the default Button Bar          **/
+/** You may need to hide more depending on your Button Bar layout **/ 
+.bullet.btn.btn-icon, .list.btn.btn-icon, .d-editor-button-bar .d-editor-spacer, [title$="Insert date / time"] {
+    display: none;
+}
+#reply-control .submit-panel {
+    margin-bottom: 5px;
+}
+/******** Make Timeline Controls Fit on Screen *******/
+.btn-primary.progress-back.btn.btn-icon-text {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+/*don't remember what this does but I think the admin tools were popping up somewhere weird when the Timeline was expanded before I added this*/
+.show-topic-admin { 
+    position: relative;
+}
+/*this is something like @media (min-width: 400px) by default so changed to min-width that will make it appear on all screen sizes*/
+@media (min-width: 1px) {  
+    #topic-progress, #topic-progress-expanded {
+        right: 0;
+        left: 16px;
+    }
+}
+#topic-progress-wrapper .topic-admin-menu-button-container {
+    left: -24px;
+}
+
+/*********** User Profiles ********/
+#user-card {
+    left: 5px !important; 
+}
+.user-main .about .controls {
+    float: none;
+}
+.user-main .about.collapsed-info .controls>ul, .user-content-wrapper {
+    display: block; 
+}
+section.user-content.user-preferences {
+    padding: 10px 5px;
+}
+.user-primary-navigation .nav-pills>li {
+    margin-bottom: 5px;
+}
+.input-xxlarge, .input-xxlarge+.control-instructions {
+    width: 300px;
+}
+.admin-contents .display-row {
+    display: block;
+}
+.user-main .collapsed-info.about .details {
+    display: flex;
+}
+.user-main .about .primary {
+    display: flex;
+    flex-wrap: wrap;
+}
+.user-main .collapsed-info.about .details .user-profile-avatar {
+    margin: 0;
+    flex: 0 0 auto;
+    align-self: flex-start;
+}
+.user-main .about .controls {
+    order: 3;
+    flex: 1 1 25%;
+    margin-left: auto;
+}
+.user-main .about.collapsed-info .controls>ul>li {
+    margin-left: 0;
+}
+/**** Search *****/
+.search-container {
+    display: block;
+}
+.search-container .search-advanced {
+   width: 90%;
+}
+.search-container .search-advanced-sidebar {
+   position: relative;
+   right: 15px;
+   width: 90%;
+}
+
+/****** Admin Panel ******/
+.admin-customize .themes-list, .content-list.color-schemes {
+    width: 100%;
+}
+.admin-container .select-kit {
+    max-width: 100%;
+}
+@media (max-width:360px) {
+    .admin-report .body {
+        display: block;
+    }
+}
+@media (max-width:479px) {
+    .admin-report.staff-logins .body {
+        display: block;
+    }
+}
+.admin-report .filters {
+    width: 140px;
+}
+.reviewable .reviewable-container {
+    display: block !important;
+    padding: 10px;
+}
+@media (max-width: 732px){
+    	.reviewable .reviewable-container {
+        display: block;
+        padding: 10px;
+    }
+    .reviewable .nav-pills>li {
+        margin-bottom: 5px;
+    }
+    .reviewable-actions .btn {
+        margin: 5px;
+    }
+}
+/***** Other Stuff *****/
+.lazyYT {
+    max-width: 100%;
+}
+.category-box {
+    display:none !important;
+}
+.signup-cta{
+    max-width:85%;
+} 
+.names span.first {
+    overflow: visible;
+}
+} /************end of @media***************/
+/******* Dropdown Button *******/
+
+.navigation-links {
+    padding: 0 10px 12px;
+}
+@media (min-width: 630px) {
+    .navigation-links {
+        padding: 16px 10px;
+    }
+}
+.dropbtn {
+  cursor: pointer;
+}
+.dropbtn:hover{
+  background-color: $tertiary !important;
+}
+.dropbtn:focus, .dropbtn:active {
+  background-color: $quaternary;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 155px;
+  background-color:#444;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+    margin: 0;
+    min-height: 1px;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: $primary;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.2;
+    display: block;
+}
+.dropdown-content a:hover {background-color: $tertiary}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+@media (max-width: 629px) {
+    .large-screen {
+        display: none !important; 
+    }   
+}
+@media (min-width: 630px) {
+    .small-screen {
+        display: none !important; 
+    }   
+}
+/************ End of Drop Down *************/

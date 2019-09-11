@@ -1,0 +1,26 @@
+$header_message: "true";
+$message_color: $primary;
+@if $header_message == "false" {
+  .banner-container {
+    display: none !important;
+  }
+}
+#banner-message {
+    display:none;
+}
+.banner-txt {
+    background-color:$danger;
+    color: $message_color;
+    padding: 8px 32px 8px 16px;
+    margin-bottom: 15px;
+}
+.info-dismiss {
+    display: block;
+}
+#banner-close-button {
+    color: #000;
+    float: right;
+    top: 0;
+    right: 0;
+    position: relative;
+}

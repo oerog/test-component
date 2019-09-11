@@ -1,0 +1,13 @@
+ /**** Settings for Desktop Monitors ****/
+@media (min-width: 630px){
+     .topic-body {
+        padding: 25px 10px 0 20px;
+    }
+    .topic-body .topic-meta-data,  {
+        padding: 0 10px 0.25em;
+    }
+    .topic-avatar {
+        padding-left: 20px!important;   
+        padding-top: 25px
+    }
+}
